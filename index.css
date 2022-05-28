@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(253, 252, 234);
+}
+
+nav{
+    background-color: rgb(255, 193, 122);
+    padding: 5px;
+}
+
+#gamecontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 2vw;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    cursor: pointer;
+    background-color: rgb(241, 238, 238);
+}
+
+.gameinfo{
+    padding: 2vw;
+    text-align: center;
+}
+
+.gameinfo h2{
+    margin: 10px;
+}
+
+.bt0{
+    border-top: 0;
+}
+.bl0{
+    border-left: 0;
+}
+.br0{
+    border-right: 0;
+}
+.bb0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 1vw;
+    margin-left: 4vw;
+    font-size: 2vw;
+    padding: 0.2vw 1.5vw;
+    background: rgb(255, 197, 132);
+    box-shadow: 4px 4px 1px 1px rgba(182, 180, 180);
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+#reset:hover{
+    cursor: pointer;
+    background: rgb(235, 112, 11);
+    color: aliceblue;
+    padding: 0.4vw 1.7vw;
+    margin: 0.8vw;
+    margin-left: 3.8vw;
+}
+
+@media screen and (max-width: 600px) {
+    #gamecontainer{
+        margin: 0px;
+        font-size: 4vw;
+        flex-direction: column-reverse;
+    }
+    .gameinfo{
+        width: 90%;
+        margin: 10px auto;
+    }
+    #reset{
+        font-size: 4vw;
+        margin: 2vw;
+        margin-left: 6vw;
+        padding:0.4vw 3vw;
+    }
+    .container{
+        margin: auto;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
